@@ -119,7 +119,7 @@ make phpstan
 
 ### Example 1: Greeting Feature
 - Controller: `GreetingController.php`
-- Routes: `acme_sylius_example_static_welcome`, `acme_sylius_example_dynamic_welcome`
+- Routes: `umkipur_sylius_example_static_welcome`, `umkipur_sylius_example_dynamic_welcome`
 - Templates: `templates/shop/greeting/`
 - JavaScript: `assets/shop/js/greetings.js`
 - Tests: `*greeting*.feature`, `*Welcome*.php`

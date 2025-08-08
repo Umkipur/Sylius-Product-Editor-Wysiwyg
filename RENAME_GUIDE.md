@@ -13,16 +13,16 @@ Before renaming the plugin, ensure that:
 ## Overview
 
 The default plugin skeleton uses:
-- Company namespace: `Acme`
-- Plugin name: `SyliusExamplePlugin`
-- Full namespace: `Acme\SyliusExamplePlugin`
+- Company namespace: `Umkipur`
+- Plugin name: `SyliusProductEditorWysiwyg`
+- Full namespace: `Umkipur\SyliusProductEditorWysiwyg`
 
 ## Naming Convention
 
 Sylius plugins should follow this naming pattern:
 - Format: `{CompanyName}\{PluginName}`
 - Plugin name should start with `Sylius` prefix
-- Example: `Acme\SyliusShopUserCleanupPlugin`
+- Example: `Umkipur\SyliusShopUserCleanupPlugin`
 
 ## Recommended Order of Operations
 
@@ -40,12 +40,12 @@ To ensure a smooth renaming process, follow this order:
 
 1. **Main plugin class file:**
    ```
-   src/AcmeSyliusExamplePlugin.php → src/{CompanyName}{PluginName}.php
+   src/UmkipurSyliusProductEditorWysiwyg.php → src/{CompanyName}{PluginName}.php
    ```
 
 2. **DependencyInjection extension file:**
    ```
-   src/DependencyInjection/AcmeSyliusExampleExtension.php → src/DependencyInjection/{CompanyName}{PluginName}Extension.php
+   src/DependencyInjection/UmkipurSyliusExampleExtension.php → src/DependencyInjection/{CompanyName}{PluginName}Extension.php
    ```
 
 ## Files to Update
@@ -64,7 +64,7 @@ Update in `tests/TestApplication/.env.test`:
 DATABASE_URL=mysql://root:root@127.0.0.1/{company_name_snake}_{plugin_name_snake}_%kernel.environment%
 ```
 
-Note: The `{company_name_snake}_{plugin_name_snake}` should be the snake_case version of your plugin name, e.g., `acme_sylius_shop_user_cleanup_plugin`.
+Note: The `{company_name_snake}_{plugin_name_snake}` should be the snake_case version of your plugin name, e.g., `umkipur_sylius_shop_user_cleanup_plugin`.
 
 ### 2. composer.json
 
@@ -119,7 +119,7 @@ Update namespace declarations in:
 
 Also update:
 - Class names to match new plugin name
-- Twig namespace references from `@AcmeSyliusExamplePlugin` to `@{CompanyName}{PluginName}`
+- Twig namespace references from `@UmkipurSyliusProductEditorWysiwyg` to `@{CompanyName}{PluginName}`
 - In `Configuration.php`, update the TreeBuilder parameter:
   ```php
   $treeBuilder = new TreeBuilder('{company_name_snake}_{plugin_name_snake}');
@@ -150,11 +150,11 @@ Update `CLAUDE.md` to reflect the new plugin name and namespace.
 
 | Find | Replace |
 |------|---------|
-| `Acme\SyliusExamplePlugin` | `{CompanyName}\{PluginName}` |
-| `AcmeSyliusExamplePlugin` | `{CompanyName}{PluginName}` |
-| `AcmeSyliusExampleExtension` | `{CompanyName}{PluginName}Extension` |
-| `@AcmeSyliusExamplePlugin` | `@{CompanyName}{PluginName}` |
-| `Tests\Acme\SyliusExamplePlugin` | `Tests\{CompanyName}\{PluginName}` |
+| `Umkipur\SyliusProductEditorWysiwyg` | `{CompanyName}\{PluginName}` |
+| `UmkipurSyliusProductEditorWysiwyg` | `{CompanyName}{PluginName}` |
+| `UmkipurSyliusExampleExtension` | `{CompanyName}{PluginName}Extension` |
+| `@UmkipurSyliusProductEditorWysiwyg` | `@{CompanyName}{PluginName}` |
+| `Tests\Umkipur\SyliusProductEditorWysiwyg` | `Tests\{CompanyName}\{PluginName}` |
 
 ### Composer.json Specific Updates
 
@@ -191,7 +191,7 @@ After renaming, verify:
 
 3. **Search for remaining old references**:
    ```bash
-   grep -r "SyliusExamplePlugin\|sylius_example" . --exclude-dir=vendor --exclude-dir=var --exclude-dir=.git
+   grep -r "SyliusProductEditorWysiwyg\|sylius_example" . --exclude-dir=vendor --exclude-dir=var --exclude-dir=.git
    ```
    Only documentation files (like this guide) should contain these references
 
@@ -214,8 +214,8 @@ After renaming, verify:
 ## Example Transformation
 
 From default skeleton:
-- `Acme\SyliusExamplePlugin\AcmeSyliusExamplePlugin`
-- `@AcmeSyliusExamplePlugin/templates/...`
+- `Umkipur\SyliusProductEditorWysiwyg\UmkipurSyliusProductEditorWysiwyg`
+- `@UmkipurSyliusProductEditorWysiwyg/templates/...`
 
 To custom plugin (example):
 - `MyCompany\SyliusAwesomeFeaturePlugin\MyCompanySyliusAwesomeFeaturePlugin`

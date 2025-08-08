@@ -1,7 +1,7 @@
 {
-    "name": "sylius/plugin-skeleton",
+    "name": "umkipur/sylius-product-editor-wysiwyg",
     "type": "sylius-plugin",
-    "description": "Acme example plugin for Sylius.",
+    "description": "A Sylius plugin to add WYSIWYG editor support for product and category descriptions using FOSCKEditorBundle.",
     "keywords": [
         "sylius",
         "sylius-plugin",
@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "friendsofsymfony/ckeditor-bundle": "^2.6",
         "sylius/sylius": "^2.0"
     },
     "require-dev": {
@@ -64,12 +65,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/"
+            "Umkipur\\SyliusProductEditorWysiwyg\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Acme\\SyliusExamplePlugin\\": ["tests/", "tests/TestApplication/src/"]
+            "Tests\\Umkipur\\SyliusProductEditorWysiwyg\\": ["tests/", "tests/TestApplication/src/"]
         }
     },
     "scripts": {
