@@ -8,7 +8,7 @@ use FOS\CKEditorBundle\FOSCKEditorBundle;
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class SyliusProductEditorWysiwyg extends Bundle
+final class UmkipurSyliusProductEditorWysiwygBundle extends Bundle
 {
     use SyliusPluginTrait;
 
