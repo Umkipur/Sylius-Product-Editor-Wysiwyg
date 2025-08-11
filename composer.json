@@ -11,7 +11,7 @@
     "require": {
         "php": "^8.2",
         "friendsofsymfony/ckeditor-bundle": "^2.6",
-        "sylius/sylius": "^2.0"
+        "sylius/sylius": "^2.1"
     },
     "require-dev": {
         "behat/behat": "^3.16",
